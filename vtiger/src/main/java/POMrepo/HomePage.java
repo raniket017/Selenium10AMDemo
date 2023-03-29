@@ -165,14 +165,16 @@ public class HomePage {
 		productsLink.click();
 	}
 
-	public void clickOnCampaignModule() {	
+	public void clickOnCampaignOption() {	
 		Actions action=new Actions(driver);
-		action.moveToElement(moreDropdown).click(campaignsOption).perform();	
+		action.moveToElement(moreDropdown).perform();;
+		action.moveToElement(campaignsOption).click().perform();	
 	}
 
 	public void clickOnVendorsModule() {
 		Actions action=new Actions(driver);
-		action.moveToElement(moreDropdown).click(vendorsOption).perform();
+		action.moveToElement(moreDropdown).perform();;
+		action.moveToElement(vendorsOption).click().perform();
 
 	}
 

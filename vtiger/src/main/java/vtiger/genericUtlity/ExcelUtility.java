@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 /**
  * this method is use to fatch th edata from excelsgeet
@@ -19,8 +20,9 @@ public class ExcelUtility {
 	 * @return
 	 * @throws EncryptedDocumentException
 	 * @throws IOException
+	 * @throws InvalidFormatException 
 	 */
-	public String fetchDataFromExcelSheet(String sheetName, int rowNo, int cellNo) throws EncryptedDocumentException, IOException {
+	public String fetchDataFromExcelSheet(String sheetName, int rowNo, int cellNo) throws EncryptedDocumentException, IOException, InvalidFormatException {
 		
 		FileInputStream fis = new FileInputStream(IPathConstant.EXCELFILEPATH);
 		return WorkbookFactory.create(fis).getSheet(sheetName).getRow(rowNo).getCell(cellNo).toString();

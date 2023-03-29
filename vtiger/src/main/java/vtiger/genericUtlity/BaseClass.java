@@ -26,7 +26,11 @@ public class BaseClass {
 	public WebDriver driver;
 	public WebDriverUtility wUtils = new WebDriverUtility();
 	public FileUtility fUtils=new FileUtility();
+	public ExcelUtility eUtils=new ExcelUtility();
+	
 	public Connection connection;
+	
+	
 	@BeforeSuite
 	public void bsConfig() throws SQLException {
 		Driver driver = new Driver();

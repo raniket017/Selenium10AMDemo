@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="vtiger.leads.ToCreateALeadTest">
+      <class name="vtiger.Campaign.CreateACampaignTest">
         <methods>
           <include name="bmConfig"/>
           <include name="bcConfig"/>
           <include name="amConfig"/>
           <include name="bsConfig"/>
           <include name="acConfig"/>
-          <include name="toCreateALeadAndToVerifyTheLead"/>
+          <include name="createCampaignWithProduscDetails"/>
           <include name="asConfig"/>
         </methods>
-      </class> <!-- vtiger.leads.ToCreateALeadTest -->
+      </class> <!-- vtiger.Campaign.CreateACampaignTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

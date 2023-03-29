@@ -3,6 +3,7 @@ package vtiger.leads;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -21,7 +22,7 @@ import vtiger.genericUtlity.ExcelUtility;
 public class ToCreateALeadTest extends BaseClass {
 	
 	@Test(retryAnalyzer = vtiger.genericUtlity.RetryAnalyserImplementationClass.class)
-	public void toCreateALeadAndToVerifyTheLead() throws EncryptedDocumentException, IOException {
+	public void toCreateALeadAndToVerifyTheLead() throws EncryptedDocumentException, IOException, InvalidFormatException {
 		
 		ExcelUtility eUtils=new ExcelUtility();
 		
@@ -34,7 +35,7 @@ public class ToCreateALeadTest extends BaseClass {
 		
 		HomePage home=new HomePage(driver);
 		home.clickOnLeadsModule();
-		Assert.fail();
+		
 		LeadsPage leads = new LeadsPage(driver);
 		leads.clickOnLeadsPlusButton();
 		
